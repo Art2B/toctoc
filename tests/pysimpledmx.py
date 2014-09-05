@@ -31,15 +31,14 @@ class DMXConnection(object):
       #open com
         if comport is not None: port_num = comport
         else:port_num = COM_PORT
-            
-	print port_num
+          
         try:
             self.com = serial.Serial(port_num, baudrate=COM_BAUD, timeout=COM_TIMEOUT)
         except:
             print "Could not open %s, quitting application" % port_num
             sys.exit(0)
             
-        print "Opened /dev/ttyUSB%s" % (self.com.portstr)
+        print "Opened %s" % (self.com.portstr)
 
     
     def setChannel(self, chan, val, autorender=False):

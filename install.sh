@@ -33,7 +33,6 @@ cuicui_install() {
 	echo "Copied the cuicui daemon script to /etc/init.d/"
   autosshdaemon_install
 }
-
 autosshdaemon_install() {
   # TODO: check if a autossh_tunnel is already there
   # TODO: ask for port
